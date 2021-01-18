@@ -2,28 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.min.js">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.min.js">
+  <link rel="stylesheet" href="style.css">
+  <!-- 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body>
 
 
+  <div class="container">
+    <div class="row" id="row-card">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+
+          <div class="row">
+            <h5 class="card-title col-6">BTC</h5><br>
+            <label class="switch">
+              <input type="checkbox col-6">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <h6 class="card-subtitle mb-2 text-muted">bitcoin</h6><br>
+          <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#demo">More Info</a>
+          <div id="demo" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-<div class="container">
+
+
+  <!-- ---------------------------------------------------------------------- -->
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+
+      <div class="row">
+        <h5 class="card-title col-6">BTC</h5><br>
+        <!-- <input type="checkbox"> -->
+
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+
+
+
+      <h6 class="card-subtitle mb-2 text-muted">bitcoin</h6><br>
+      <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#demo">More Info</a>
+      <div id="demo" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- _______________________________________________________________________ -->
+
+  <div class="container">
     <h2>Simple Collapsible</h2>
     <p>Click on the button to toggle between showing and hiding content.</p>
     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
@@ -37,6 +102,29 @@
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="main.js"></script>
+
+
+
+
+  "<div class='card' style='width: 18rem;'>" +
+    "<div class='card-body'>" +
+      "<div class='row'>" +
+        "<h5 class='card-title col-8'>" + ajax_arr[i].symbol + "</h5>" + "<br>" +
+        "<label class='switch'>" +
+          "<input type='checkbox'>" +
+          "<span class='slider round'></span>" +
+          "</label>" +
+      "</div>" +
+        "<h6 class='card-subtitle mb-2 text-muted'>" + ajax_arr[i].name + "</h6>" + "<br>" +
+        "<button onclick='callMoreInfoAjax()' class='btn btn-primary' data-toggle='collapse'
+        data-target='#demo" + [i] + "'>" +
+        "More Info" + 
+        "</button>" +
+      "<div id='demo" + [i] + "' class='collapse'>" +
+        "Lorem ipsum dolor sit amet, consectetur adipisicing " +
+        "</div>"
+    "</div>"
+  "</div>"
 
 
 
