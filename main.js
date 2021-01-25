@@ -2,9 +2,11 @@ var coinsList;
 var coinsPrices;
 var coinID;
 var coinMoreInfo;
+var values = []
 
 $(function () {
     getAllCoins();
+
 
 })
 
@@ -24,7 +26,7 @@ function getAllCoins() {
                             "<div class='row'>" +
                                 "<h5 class='card-title col-8'>" + coinsList[i].symbol + "</h5>" + "<br>" +
                                 "<label class='switch'>" +
-                                "<input type='checkbox'>" +
+                                "<input type='checkbox' id='checkId"+[i]+"'name='coin' value='coin"+[i]+"' >" +
                                 "<span class='slider round'>"+"</span>" +
                                 "</label>" +
                             "</div>" +
@@ -32,13 +34,35 @@ function getAllCoins() {
                                 "<button onclick='getMoreInfoForCoin(`"+ coinsList[i].id + "`)' class='btn btn-primary' data-toggle='collapse' data-target='#" + coinsList[i].id + "'>" +
                                 "More Info" + 
                                 "</button>" +
-                            "<div id='" + coinsList[i].id + "'class='collapse'>" +  // problem is the ID
+                            "<div id='" + coinsList[i].id + "'class='collapse'>" +  
                                  
                             "</div>"
                         "</div>"
                     "</div>"
 
                 document.getElementById("row-card").innerHTML += result;
+
+
+                $("input").on("click", function () {
+                    var id = $(this).attr("id");
+                    if ($(this).is(":checked")) {
+                 
+                      values.push(id);
+                      if (values.length > 5) {
+                        var mymodal = $("#exampleModal");
+                        mymodal.find('.modal-body').html(`<label class='switch'>
+                        <input type='checkbox' id='${values[5]}' name='coin' value='${values[5]}' >
+                        <span class='slider round'></span>" 
+                        "</label>`); // add here the coins
+                        mymodal.modal('show');
+
+                      }
+                    }
+                    else {
+                      values.splice(values.indexOf(id), 1);
+                    }
+                  });
+
             }
         }
     })
@@ -62,4 +86,3 @@ function getMoreInfoForCoin(coinID) {
         }
     })
 }
-
